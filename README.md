@@ -51,7 +51,14 @@ kubectl get all
 
 ## Generators
 
-Apply the generator example
+Apply the generator example:
+
 ```
 kustomize build overlays/generators | k apply  -f -
+```
+
+To apply the manifests and prune any old configmaps:
+
+```
+kustomize build overlays/generators | kubectl apply --prune -l app=web-service  -f -
 ```
