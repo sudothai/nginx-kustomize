@@ -48,3 +48,10 @@ Check all resources:
 ```
 kubectl get all
 ```
+
+## Generators
+
+Apply the generator example
+```
+kustomize build overlays/generators | k apply  -f -
+```
